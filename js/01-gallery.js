@@ -23,8 +23,8 @@ function createImageCardsMarkup(galleryItems) {
 }
 
 const instance = basicLightbox.create(`<img src="" width = "1280" >`, {
-    onShow: instance => window.addEventListener('keydown', onEscapecKeyPress),
-    onClose: instance => window.removeEventListener('keydown', onEscapecKeyPress),
+    onShow: instance => window.addEventListener('keydown', onEscapeKeyPress),
+    onClose: instance => window.removeEventListener('keydown', onEscapeKeyPress),
 });
 containerImages.addEventListener('click', onImageClick);
 
@@ -39,7 +39,7 @@ function onImageClick(event) {
     }
 }
 
-function onEscapecKeyPress(event) {
+function onEscapeKeyPress(event) {
     if (event.code !== 'Escape') {
         console.log(event.code);
         return;
